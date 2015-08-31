@@ -1,0 +1,31 @@
+{
+    "name": "jcreact",
+    "version": "0.0.1",
+    "authors": [
+        "ccjoe <icareu.joe@gmail.com>"
+    ],
+    "description": "'react 封装的更抽象级的组件'",
+    "main": [
+        "dist/js/jcreact.js",
+        "dist/js/jcreact.min.js"
+    ],
+    "dependencies": {
+      "react": "^0.13.3"
+    },
+    "moduleType": [
+        "amd"
+    ],
+    "keywords": [
+        "react",
+        "component"
+    ],
+    "license": "MIT",
+    "homepage": "http://ccjoe.github.io",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}

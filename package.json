@@ -1,0 +1,24 @@
+{
+  "name": "jcreact",
+  "version": "1.0.0",
+  "description": "'jcreact component for React'",
+  "main": "jcreact.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccjoe/jcreact.git"
+  },
+  "keywords": [
+    "jcreact.js",
+    "react",
+    "component"
+  ],
+  "author": "Joe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccjoe/jcreact/issues"
+  },
+  "homepage": "https://github.com/ccjoe/jcreact#readme"
+}
