@@ -9,7 +9,6 @@
 // 全局方式
 var Nav = JcReact.Nav,
     NavItem = JcReact.NavItem;
-
 var SetNav = React.createClass({
     render: function(){
         return <div>
