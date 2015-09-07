@@ -1,6 +1,6 @@
 {
   "name": "jcreact",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "'jcreact component for React'",
   "main": "jcreact.js",
   "scripts": {
@@ -20,5 +20,21 @@
   "bugs": {
     "url": "https://github.com/ccjoe/jcreact/issues"
   },
-  "homepage": "https://github.com/ccjoe/jcreact#readme"
+  "homepage": "https://github.com/ccjoe/jcreact#readme",
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "browserify": "^11.0.1",
+    "browserify-derequire": "^0.9.4",
+    "reactify": "latest",
+    "watchify": "~2.1",
+    "vinyl-source-stream": "^1.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-ruby-sass": "~1.0.1",
+    "del": "~1.2.0",
+    "gulp-rename": "^1.2.2",
+    "react": "latest",
+    "gulp-concat":"~2.5.2",
+    "gulp-uglify":"~1.1.0"
+  }
 }
