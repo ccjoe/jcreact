@@ -1,0 +1,79 @@
+@import "vars.scss";
+@import "base.scss";
+@import "global.scss";
+@import "nav.scss";
+
+/* 命名规范
+
+CSS相关规范
+1.命名力求简单，尽量使用简写
+2.按层次使用'-'
+
+(1)页面结构
+容器: container                   
+页头：header                       hd
+页尾：footer                       ft
+页面主体：main                      mn
+内容：content/container            con
+导航：nav                          nav
+侧栏：sidebar                      sb
+栏目：column                       col                       
+页面外围控制整体布局宽度：wrapper      wp
+左右中：left right center          lt rt ct
+
+(2)导航
+导航：nav                          
+主导航：mainnav                    mnnav
+子导航：subnav                     nav-sub
+顶导航：topnav                     nav-top
+边导航：sidebar                    side
+左导航：leftsidebar                side-lt
+右导航：rightsidebar               side-rt
+菜单：menu                         menu
+子菜单：submenu                    menu-sub
+标题: title                       title
+摘要: summary                     smy
+
+(3)组件
+布局 layout                       layout
+标签：tab                         tab
+导航：nav                          nav
+面板  pane                        pane
+手凤琴 accordion                  accd
+按钮组 buttongroup                 btn-group
+
+
+(4)功能
+标志：logo                         logo
+广告：banner                       banner
+登陆：login                        login
+登录条：loginbar                   login
+注册：regsiter                     reg
+搜索：search                       sch
+功能区：shop                        shop
+标题：title                        title
+加入：joinus                       join
+状态：status                       status
+按钮：button                       btn
+滚动：scroll                       scroll
+标签页：tab                         tab
+文章列表：list                      list
+提示信息：message                   msg
+当前的: current                    crt
+小技巧：tips                       tips
+图标: icon                        icon
+注释：note                         note
+指南：guild                        guild
+服务：service                      service
+热点：hot                          hot
+新闻：news                         news
+下载：download                     download
+投票：vote                         vote
+合作伙伴：partner                   partner
+友情链接：link                      link
+版权：copyright                    copyright
+*/
+
+
+
+

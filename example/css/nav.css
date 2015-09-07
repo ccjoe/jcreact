@@ -1,0 +1,16 @@
+.nav li {
+  list-style: none outside none;
+  float: left; }
+  .nav li a {
+    text-decoration: none;
+    padding: 8px; }
+
+.nav-tab li {
+  border: 1px solid #000; }
+
+.nav-side li {
+  float: none;
+  border-bottom: 1px solid #000; }
+
+.nav-breadcumrb li a {
+  font-size: 12px; }
