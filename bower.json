@@ -12,6 +12,7 @@
     "dependencies": {
       "requirejs": "~2.1.15",
       "react": "^0.13.3",
+      "react-router": "0.13.3",
       "amazeui": "^2.4.2"
     },
     "moduleType": [

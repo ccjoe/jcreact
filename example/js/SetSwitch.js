@@ -1,7 +1,7 @@
 'use strict';
 
-var Switch = jcreact.Switch,
-    Pane = jcreact.Pane; 
+var Switch = JcReact.Switch,
+    Pane = JcReact.Pane; 
 
 var SetSwitch = React.createClass({
     render: function(){

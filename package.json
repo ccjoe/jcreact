@@ -34,7 +34,9 @@
     "del": "~1.2.0",
     "gulp-rename": "^1.2.2",
     "react": "latest",
+    "react-router": "0.13.3",
     "gulp-concat":"~2.5.2",
-    "gulp-uglify":"~1.1.0"
+    "gulp-uglify":"~1.1.0",
+    "main-bower-files": "~2.9.0"
   }
 }

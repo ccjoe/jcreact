@@ -7,17 +7,12 @@
 //     Pane = J.Pane; //全局方式
 
 // 全局方式
-var Nav = jcreact.Nav,
-    NavItem = jcreact.NavItem;
+var Nav = JcReact.Nav,
+    NavItem = JcReact.NavItem;
 
 var SetNav = React.createClass({
     render: function(){
         return <div>
-            <Nav type="tabs"> 
-                <NavItem href="/test.html" title="test it" active>abc</NavItem>
-                <NavItem href="/test2.html" title="test it">abc123</NavItem>
-                <NavItem href="/test3.html" title="test it2" disabled>abc123</NavItem>
-            </Nav>
             <Nav type="tabs"> 
                 <NavItem href="/test.html" title="test it" active>abc</NavItem>
                 <NavItem href="/test2.html" title="test it">abc123</NavItem>

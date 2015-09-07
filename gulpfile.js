@@ -3,11 +3,43 @@ var Browsersync = require('browser-sync').create();
 // var $    = require('gulp-load-plugins')();
 
 /*=========================================
+=                 CLEAN                   =
+=========================================*/
+var del = require('del');
+gulp.task('del:css', function (cb) {
+  del([
+    './example/css',
+  ], cb);
+});
+
+gulp.task('del:lib', function (cb) {
+  del([
+    './example/lib',
+  ], cb);
+});
+
+gulp.task('del:dist', function (cb) {
+  del([
+    './dist'
+  ], cb);
+});
+
+/*=========================================
+=           Bower => lib                =
+=========================================*/
+var gulpBowerFiles = require('main-bower-files');
+gulp.task("dev:bower", ["del:lib"],  function(){
+    return gulp.src(gulpBowerFiles({}), { base: './bower_components' })
+    .pipe(gulp.dest("./example/lib"));
+});
+
+
+/*=========================================
 =           抽象 browserify              =
 =========================================*/
 var dependencies = [
     'react', // react is part of this boilerplate
-    'react-router',
+    // 'react-router',
     'jcreact'
 ];
 
@@ -33,7 +65,8 @@ function browserifyIt(opts){
         cache: {},
         packageCache: {},
         fullPaths: true,
-        // standalone: 'JcReact'    //是否产生一个独立的全局变量，是的话这样的文件就不需要被require了
+        standalone: opts.globalVar?opts.globalVar:null
+        //是否产生一个独立的全局变量，是的话这样的文件就不需要被require了
     });
     
     bundler.external(opts.development ? dependencies : [])
@@ -65,16 +98,8 @@ function browserifyIt(opts){
 /*=========================================
 =             For SASS            =
 =========================================*/
-var del = require('del');
-gulp.task('del', function (cb) {
-  del([
-    './example/css',
-    // './dist'
-  ], cb);
-});
-
 var sass = require('gulp-ruby-sass');
-gulp.task('sass', ['del'], function () {
+gulp.task('sass', ['del:css'], function () {
   return sass('./src/sass/')
     .pipe(gulp.dest('./example/css'))
 });
@@ -83,12 +108,13 @@ gulp.task('sass', ['del'], function () {
 /*=========================================
 =             For JS            =
 =========================================*/
-gulp.task('dist:scripts', function(){
+gulp.task('dist:scripts', ['del:dist'], function(){
     browserifyIt({
         entries: ['./src/jcreact.js'],
         development: true,
         entriesDestName: 'jcreact.js',
-        dest: './dist/js/'
+        dest: './dist/js/',
+        globalVar: 'JcReact'
     });
 });
 
@@ -112,10 +138,10 @@ gulp.task('dev:script.example', function(){
 /*=========================================
 =             For Server            =
 =========================================*/
-gulp.task('serve', ['sass',  'dev:scripts', 'dev:script.example'], function() {
+gulp.task('serve', ['sass',  'dev:bower', 'dev:scripts', 'dev:script.example'], function() {
     Browsersync.init({
         notify: false,  //不显示在浏览器中的任何通知。
-        logPrefix: 'BS',//改变控制台日志前缀
+        logPrefix: 'GULP REACT',//改变控制台日志前缀
         server: ['example'], //多个基目录
         browser: ["google chrome"] // 在chrome、firefix下打开该站点 , "firefox"
     });
