@@ -33,11 +33,16 @@ var App = React.createClass({
 var SetNav = require('./SetNav');
 var SetSwitch = require('./SetSwitch');
 
-//handler值为相应的组件
+//handler值为相应的组件 
+// <Route path="setswitch/:name" handler={SetSwitchName}/>
+
 var routes = (
   <Route path="/" handler={App}>
     <Route path="setnav" handler={SetNav} />
-    <Route path="setswitch" handler={SetSwitch} />
+    < Route
+path = "setswitch"
+handler = {SetSwitch} >
+    < / Route >
   </Route>
 );
 
